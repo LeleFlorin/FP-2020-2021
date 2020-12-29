@@ -1,0 +1,24 @@
+["00000000","00000001","00000002","00000003","00000004"]
+["0000000a","0000000b","0000000c"]
+["000002Bi","000002Bj","000002Bk","000002Bl","000002Bm"]
+
+Nothing
+Nothing
+Just (Password "MyStr0ngPassword2")
+Nothing
+Just (Password "Abcd1234")
+Nothing
+Nothing
+
+Just (Email {username = "johnny", domain = "example.com"})
+Nothing
+Nothing
+Nothing
+Nothing
+Just (Email {username = "johnny.john", domain = "domain.com"})
+Just (Email {username = "johnny.john", domain = "domain.example.com"})
+Just (Email {username = "last.da.first", domain = "didatec.utcluj.mail.com"})
+Just (Email {username = "last.da.first", domain = "didatec.utcluj.mail.ro"})
+Nothing
+Nothing
+Nothing

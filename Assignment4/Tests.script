@@ -1,0 +1,13 @@
+:l Solutions.hs
+
+strWords "Whats up doc"
+strWords "Beware the Jabberwock my son"
+
+piglatinize "Whats up doc"
+piglatinize "An apple a day keeps the doctor away"
+
+apprPi
+
+topWords 10 "I know that you know that I know"
+topWords 3 "I know that you know that I know"
+topWords 6 "An apple a day keeps the doctor away"

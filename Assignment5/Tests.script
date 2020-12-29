@@ -1,0 +1,26 @@
+:l Solutions.hs
+
+take 5 passwords
+take 3 (drop 10 passwords)
+take 5 (drop 10000 passwords)
+
+validatePassword "123"
+validatePassword "abc"
+validatePassword "MyStr0ngPassword2"
+validatePassword "abcDE12"
+validatePassword "Abcd1234"
+validatePassword "abcd1234"
+validatePassword "abcd12A"
+
+validateEmail "johnny@example.com"
+validateEmail "johnny@.com"
+validateEmail "johnny.com"
+validateEmail "johnny@domain@.com"
+validateEmail "x@domain.com"
+validateEmail "johnny.john@domain.com"
+validateEmail "johnny.john@domain.example.com"
+validateEmail "last.da.first@didatec.utcluj.mail.com"
+validateEmail "last.da.first@didatec.utcluj.mail.ro"
+validateEmail "last.da.first@didatec..utcluj.mail.com"
+validateEmail "last.da.first@didatec.utcluj.mail..com"
+validateEmail "last.da.first@@didatec.utcluj.mail.ro"
