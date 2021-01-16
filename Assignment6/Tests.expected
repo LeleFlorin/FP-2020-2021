@@ -1,0 +1,30 @@
+Success "" "abc"
+Success " " "abc"
+
+Success "abc" "xyz"
+Success "abc" "xyz"
+Error "Unexpected character '['"
+Success "there" "xyz"
+
+Success "abc" " abc"
+Error "Unexpected character ' '"
+Error "Unexpected character '1'"
+Success "abc1" " abc"
+Success "empty?" " abc"
+
+Success ["a","b","c"] ""
+Success ["abc"] ""
+Success ["a"] ",,b"
+Success ["a","b","c","d"] ""
+
+Success (Symbol "abc") ""
+Success (Number 123) ""
+Error "Unexpected character '?'"
+Error "Unexpected character '('"
+
+Success [Atom (Symbol "a"),Atom (Symbol "b"),Atom (Symbol "c")] ""
+Error "Unexpected character '('"
+
+Success (List [Atom (Symbol "a"),Atom (Symbol "b"),Atom (Symbol "c")]) ""
+Success (Atom (Number 123)) ""
+Success (Atom (Symbol "abc1")) ""

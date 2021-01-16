@@ -1,0 +1,32 @@
+:l MiniLisp.hs
+
+runParser ws "abc"
+runParser ws " abc"
+
+runParser (between (char '[') (char ']') (string "abc")) "[abc]xyz"
+runParser (between (char '1') (char '1') (string "abc")) "1abc1xyz"
+runParser (between (char '1') (char '1') (string "abc")) "[abc]xyz"
+runParser (between (string "hey") (string "hey") (string "there")) "heythereheyxyz"
+
+runParser ident "abc abc"
+runParser ident " abc abc"
+runParser ident "1abc abc"
+runParser ident "abc1 abc"
+runParser ident "empty? abc"
+
+runParser (sepBy (char ',') ident) "a,b,c"
+runParser (sepBy (char ',') ident) "abc"
+runParser (sepBy (char ',') ident) "a,,b"
+runParser (sepBy ws ident) "a b c d"
+
+runParser lispAtom "abc"
+runParser lispAtom "123"
+runParser lispAtom "?123"
+runParser lispAtom "(123)"
+
+runParser lispList "(a b c)"
+runParser lispList "(a b c("
+
+runParser lisp "(a b c)"
+runParser lisp "123"
+runParser lisp "abc1"
